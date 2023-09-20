@@ -1,17 +1,16 @@
-import React from "react";
-import ListItems from "./ListItems";
+import ItemList from "./ItemList";
 
-const Content = ({ items, handleChecked, handleDelete}) => {
+const Content = ({ items, handleCheck, handleDelete }) => {
   return (
     <main>
       {items.length ? (
-        <ListItems
+        <ItemList
           items={items}
-          handleChecked={handleChecked}
+          handleCheck={handleCheck}
           handleDelete={handleDelete}
         />
       ) : (
-        <p style={{ marginTop: "2rem" }}>Your List Is Empty</p>
+        <p style={{ marginTop: "2rem" }}>Your list is empty.</p>
       )}
     </main>
   );
